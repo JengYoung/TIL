@@ -8,4 +8,4 @@ VS Code 내장 터미널에서 단축키를 사용해, JS를 비롯한 다양한
 
 실행 결과는 OUTPUT창에 기록된다.
 
-![code_runner_실행결과](/imgs/code runner.PNG)
+![code runner](https://user-images.githubusercontent.com/78713176/120962359-8e3a2b80-c79a-11eb-928e-e9c55019d12f.PNG)
