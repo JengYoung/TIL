@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>오늘의 할 일</h1>
+    <ul class="itemList">
+        <li>
+            <input type="checkbox" id="item1" onclick="hello">
+            <label for="item1">이벤트 버블링 학습</label>
+        </li>
+        <li>
+            <input type="checkbox" id="item2">
+            <label for="item2">이벤트 캡쳐 학습</label>
+        </li>
+    </ul>
+    <script>
+        const hello = () => console.log('hello')
+        var inputs = document.querySelectorAll('input');
+        inputs.forEach(function(input) {
+            input.addEventListener('click', function(event) {
+                alert('clicked');
+            });
+        });
+        
+        // 이벤트 추가 생성
+        var itemList = document.querySelector('.itemList');
+
+        var li = document.createElement('li');
+        var input = document.createElement('input');
+        var label = document.createElement('label');
+        var labelText = document.createTextNode('이벤트 위임 학습');
+
+        input.setAttribute('type', 'checkbox');
+        input.setAttribute('id', 'item3');
+        label.setAttribute('for', 'item3');
+        label.appendChild(labelText);
+        li.appendChild(input);
+        li.appendChild(label);
+        itemList.appendChild(li);
+    </script>
+</body>
+</html>
