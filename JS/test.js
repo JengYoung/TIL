@@ -1,10 +1,20 @@
-const button = document.querySelector('button');
-button.addEventListener('click', printTarget);
+'use strict'
+const person = {
+    name: 'Jaeyoung',
+    greeting: function() {
+        console.log(`${name}: Hello!`)
+    }
+};
 
-function printTarget(e) {
-    console.log(e.target);
-}
+console.log(typeof person);
+console.log(person);
 
-function hello() {
-    console.log('hi')
+
+function makeObj () {
+    return {
+        this: 'is',
+        Object: 'literal'
+    }
 }
+const whatIsThis = makeObj();
+console.log(whatIsThis);
