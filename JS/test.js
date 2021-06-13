@@ -53,3 +53,25 @@ var logOdds = function (i) {
 };
 console.log("---")
 repeat(5, logOdds);
+
+var count = 0;
+function increase2() {
+    return ++count;
+}
+console.log("---")
+console.log(increase2());
+console.log(increase2());
+
+
+
+var count = 0;
+
+// 이는 순수함수다. 그저 어떤 것들이 들어와도, 1을 더하기 때문.
+function increase(n) {
+    return ++n;
+}
+console.log("---")
+// count = increase(count);
+console.log(increase(count)); // 1
+console.log(increase(count)); // 1
+console.log(increase(count)); // 1
