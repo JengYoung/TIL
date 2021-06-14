@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 const person = {
     name: 'Jaeyoung',
     greeting: function() {
@@ -75,3 +75,16 @@ console.log("---")
 console.log(increase(count)); // 1
 console.log(increase(count)); // 1
 console.log(increase(count)); // 1
+
+
+var x = 'global';
+function foo() {
+    console.log(x); // 1    
+    var x = 'local';
+}
+
+foo();
+console.log(x);
+
+var z = 1;
+
