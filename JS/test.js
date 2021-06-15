@@ -1,203 +1,85 @@
-// const person = {
-//     // 데이터 프로퍼티
-//     firstName: 'Jaeyoung',
-//     lastName: 'Hwang',
+// const person = new Object();
 
-//     get fullName() {
-//         return `${this.firstName} ${this.lastName}`
-//     },
-
-//     set fullName(name) {
-//         [this.firstName, this.lastName] = name.split(' ');
-//     }
+// person.name = 'Hwang';
+// person.greeting = function() {
+//     console.log(`Hi! ${this.name}`)
 // };
 
-// // 데이터 프로퍼티를 통한 프로퍼티 값 참조
-// console.log(person.firstName + ' ' + person.lastName);
-
-// // 접근자 프로퍼티를 통한 프로퍼티 값 저장
-// // 접근자 프로퍼티 fullName에 값 저장 시 setter 함수 호출
-// person.fullName = 'Jengyoung Hwang';
-// console.log(person) 
-// // { firstName: 'Jengyoung', lastName: 'Hwang' }
-// console.log(person.fullName)
-
-// // 여기서 firstName은 데이터 프로퍼티.
-// let descriptor = Object.getOwnPropertyDescriptor(person, 'firstName');
-// console.log(descriptor) // 데이터 프로퍼티 어트리뷰트
-
-// // fullName은 접근자 프로퍼티
-// descriptor = Object.getOwnPropertyDescriptor(person, 'fullName');
-// console.log(descriptor) // 접근자 프로퍼티 어트리뷰트  
-
-const dog = {};
-
-Object.defineProperty(dog, 'name', {
-    value: 'POMI',
-    writable: true,
-    enumerable: true,
-    configurable: true,
-});
-
-Object.defineProperty(dog, 'age', {
-    value: '9',
-})
-
-let descriptor = Object.getOwnPropertyDescriptor(dog, 'name'); 
-console.log('name', descriptor);
-descriptor = Object.getOwnPropertyDescriptor(dog, 'age');
-console.log('age', descriptor);
-
-// [name] (enumerable)
-console.log(Object.keys(dog)); 
-
-// ignored (writable: false)
-dog.age = 10;
-
-// ignored (configurable: false)
-// delete dog.age; 
-
-descriptor = Object.getOwnPropertyDescriptor(dog, 'age');
-console.log('age', descriptor);
-
-Object.defineProperty(dog, 'info', {
-    // getter
-    get() {
-        return `${this.name}:${this.age}`
-    },
-    set(name) {
-        [this.name, this.age] = name.split(' ')
-    },
-    enumerable: true,
-    configurable: true,
-});
-console.log("I LOVE ", dog)
-descriptor = Object.getOwnPropertyDescriptor(dog, 'info');
-console.log(descriptor);
-
-dog.info = 'BOBBY 3';
-console.log(dog);
-
-
-// const person = { name: 'Hwang Jaeyoung' };
-
-// console.log(Object.isExtensible(person)); // true
-
-// Object.preventExtensions(person);
-
-// // person 객체는 확장이 금지된 객체
-// console.log(Object.isExtensible(person)); // false
-
-// // 프로퍼티 추가가 금지
-// person.age = 20; // 무시. strict mode에서는 예외
 // console.log(person);
-
-// // 프로퍼티 추가는 금지되지만 삭제는 가능
-// delete person.name;
-// console.log(person);
-
-// // 프로퍼티 정의에 의한 프로퍼티 추가도 금지
-// // Object.defineProperty(person, 'age', { value: 20 });
-// // TypeError: Cannot define property age, object is not extensible
+// person.greeting();
 
 
-// const person = { name: 'Hwang' };
+// function Circle(radius) {
+//     this.radius = radius;
+//     this.getDiameter = function() {
+//         return 2 * this.radius;
+//     };
 
-// // person 객체는 밀봉된 객체가 X
-// console.log(Object.isSealed(person)); // false
+//     return { name: 'jaeyoung'};
+// };
 
-// // person 객체를 밀봉하여 프로퍼티 추가, 삭제, 재정의 금지
-// Object.seal(person);
+// const circle = new Circle(1);
 
-// // person 객체는 밀봉된 객체
-// console.log(Object.isSealed(person));
-
-// // 밀봉된 객체는 configurable이 false
-// console.log(Object.getOwnPropertyDescriptors(person));
-
-// /* 
-//     {
-//         name: { value: 'Hwang', writable: true, enumerable: true, configurable: false }
-//     }
-// */
-
-// // 프로퍼티 추가 금지
-// person.age = 20;
-// console.log(person);
-
-// // 프로퍼티 삭제 금지
-// delete person.name;
-// console.log(person);
-
-// // 프로퍼티 값 갱신 가능
-// person.name = 'young';
-// console.log(person); // { name: "young" }
-
-// // 프로퍼티 어트리뷰트 재정의 금지
-// // Object.defineProperty(person, 'name', { configurable: true });
-// // TypeError: Cannot redefine property name;
+// console.log(circle)
 
 
-// const person = { name: 'Hwang Jaeyoung' };
+// function foo() {}
 
-// // person 객체는 밀봉된 객체가 X
-// console.log(Object.isFrozen(person)); // false
 
-// // person 객체를 밀봉하여 프로퍼티 추가, 삭제, 재정의 금지
-// Object.freeze(person);
+// foo.prop = 10;
 
-// // person 객체는 밀봉된 객체
-// console.log(Object.isFrozen(person));
+// foo.method = function() {
+//     console.log(this.prop);
+// }
+// foo.method() // 10
 
-// // 밀봉된 객체는 configurable이 false
-// console.log(Object.getOwnPropertyDescriptors(person));
+// function foo () {}
+// const bar = function() {};
 
-// /* 
-//     {
-//         name: { value: 'Hwang', writable: false, enumerable: true, configurable: false }
-//     }
-// */
+// const baz = {
+//     x: function () {}
+// };
 
-// // 프로퍼티 추가 금지
-// person.age = 20;
-// console.log(person);
+// console.log(new foo())
+// console.log(new bar())
+// console.log(new baz.x());
 
-// // 프로퍼티 삭제 금지
-// delete person.name;
-// console.log(person);
+// const arrow = () => {}; 
 
-// // 프로퍼티 값 갱신 가능
-// person.name = 'young';
-// console.log(person); // { name: "young" }
+// // new arrow()// Type Error! (non-constructor)
 
-// // 프로퍼티 어트리뷰트 재정의 금지
-// // Object.defineProperty(person, 'name', { configurable: true });
-// // TypeError: Cannot redefine property name;
+// const obj = {
+//     x() {}
+// };
 
-function deepFreeze(target) {
-    if (target && typeof target === 'object' && !Object.isFrozen(target)) {
-        Object.freeze(target);
-        /*
-            모든 프로퍼티를 순회하며 재귀적으로 동결
-            Object.keys 메서드는 열거 가능한 프로퍼티 키를 배열로 반환
-            forEach 메서드는 배열을 순회하며 콜백함수를 실행
-        */
-        Object.keys(target).forEach(key => deepFreeze(target[key]));
+// // new obj.x(); // Type Error! (non-constructor)
+
+// function add (x,y) {
+//     return x + y;
+// };
+
+// let inst = new add();
+// console.log(inst)
+
+function Circle(radius) {
+    // if not call by using new operator -> undefined
+    if (!new.target) {
+        return new Circle(radius);
     }
-    
-    return target;
+    this.radius = radius;
+    this.getDiameter = function () {
+        return 2 * this.radius;
+    };
 }
 
-const person = {
-    name: "Hwang",
-    address: { city: 'Seoul' }
-};
+const circle = Circle(5);
+console.log(circle.getDiameter())
 
-deepFreeze(person);
+const str = String(123);
+console.log(str, typeof str);
 
-console.log(Object.isFrozen(person)); // true
-// 중첩 객체까지 동결
-console.log(Object.isFrozen(person.address)); // true
+const num = Number('123');
+console.log(num, typeof num);
 
-person.address.city = 'Busan';
-console.log(person); // { name: 'Hwang', address: { city: 'Seoul' }}
+const bool = Boolean('true');
+console.log(bool, typeof bool);
