@@ -1,2 +1,9 @@
-const arr = Array.from(new Array(3), (_, i) => () => i);
-arr.forEach(f => console.log(f()));
+class Student {
+  name = 'Jaeyoung';
+  getName = function() {
+    return this.name;
+  }
+}
+
+const me = new Student();
+console.log(me.getName);
