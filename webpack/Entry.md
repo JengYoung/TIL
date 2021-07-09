@@ -1,0 +1,30 @@
+# **Entry**
+
+모듈의 의존관계를 해석하기 위한 시작점 설정
+
+![](https://images.velog.io/images/young_pallete/post/165b4868-ec12-42fd-bb40-209f10e66ac2/image.png)
+
+모듈 A는 다른 모듈 B, C에 대한 의존성을 가지고 있다.  
+이때, 우리는 A를 Entry로 지정할 수 있다. 왜냐하면, B와 C는 서로 참조관계가 없기 때문이다.
+
+즉 Entry란
+
+- 모듈의 의존 관계의 시작점이자
+- 웹 자원들을 변환하는 최초의 파일 경로이다.
+- 그렇기에 다른 모듈들의 관계를 해석하기 위해, 전반적인 구조 및 내용이 포함되어야 한다.
+
+```
+// webpack.config.js
+module.exports = {
+  entry: './src/index.js'
+}
+```
+
+만약 멀티페이지라면 다음과 같이 엔트리를 여러 개로 분리하는 것이 효율적일 수 있다! (굳이 파일을 하나로 만들 필요가 없기 때문. 페이지마다 원하는 것만 딱!딱! 주는 것이 더 효율적이기 때문.)
+
+```
+entry: {
+  login: './src/LoginView.js',
+  main: './src/MainView.js'
+}
+```
