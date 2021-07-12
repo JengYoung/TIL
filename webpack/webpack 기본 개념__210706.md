@@ -40,3 +40,21 @@ npm install webpack webpack-cli --save-dev
 //npx로 node_modules > .bin에 직접 다가가지 않고 쉽게 실행
 npx webpack --[키]=[값]
 ```
+
+---
+
+### **Package.json `--save-dev` vs `--save`**
+
+`package.json`은 크게 2가지로 나눔.
+
+- 어플리케이션 내부에 직접 포함되는 모듈
+- 개발 과정에 필요한 모듈
+
+이 2가지를 구분하는 key.
+
+- dependencies: 전자. `--save`
+- devDependencies: 후자. `--save-dev`
+
+### **개발환경과 프로덕션 환경**
+
+### **Mode & Webpack-merge**
