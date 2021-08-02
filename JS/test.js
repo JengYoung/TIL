@@ -1,9 +1,8 @@
-class Student {
-  name = 'Jaeyoung';
-  getName = function() {
-    return this.name;
-  }
+function counting() {
+	for (let i = 0; i < 5; i += 1) {
+		setTimeout(function () {
+			console.log(i);
+		}, i * 100);
+	}
 }
-
-const me = new Student();
-console.log(me.getName);
+counting();
