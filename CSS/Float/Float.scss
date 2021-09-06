@@ -1,0 +1,53 @@
+// .container {
+//   border: 4px solid;
+
+//   .item {
+//     width: 100px;
+//     height: 100px;
+//     background-color: royalblue;
+//     border-radius: 10px;
+//     font-size: 40px;
+//     margin: 10px;
+//     &:nth-child(4) {
+//       // clear: left; // float과 똑같이 작성
+//       width: 150px;
+//       height: 150px;
+//       background-color: orange;
+//     }
+//   }
+
+//   .float {
+//     float: left;
+//   }
+  
+//   .clearfix::after {
+//     content:"";
+//     display: block;
+//     clear: both; // left,right 둘 다 해제
+//   }
+// }
+
+.clearfix::after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+.float--left {
+	float: left;
+}
+
+.float--right {
+	float: right;
+}
+
+.container {
+	border: 4px solid;
+}
+
+.container .item {
+	width: 100px;
+	height: 100px;
+	background: royalblue;
+	font-size: 40px;
+}
