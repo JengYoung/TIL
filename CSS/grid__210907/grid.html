@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <!-- <style>
+    .container {
+      border: 4px solid;
+      display: grid;
+      grid-template-rows: 100px 100px;
+      grid-template-columns: 200px 200px 200px;
+    }
+    .container .item {
+      border: 2px solid;
+      font-size: 30px;
+    }
+    .container .item:nth-child(2) {
+      grid-row: span 2;
+    }
+  </style>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div> -->
+
+
+  <!-- <style>
+    .container {
+      border: 4px solid;
+      display: grid;
+      grid-template-rows: 50px 50px;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+    .container .item {
+      border: 2px solid;
+      font-size: 2.5rem;
+      background: orange;
+    }
+  </style>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div> -->
+
+  <!-- <style>
+    .container {
+      border: 4px solid;
+      display: grid;
+      grid-template-rows: repeat(2, 100px);
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 100px;
+      grid-auto-columns: 100px;
+      grid-auto-flow: dense;
+    }
+    .container .item {
+      border: 2px solid;
+      font-size: 20px;
+      background: orange;
+    }
+    .container .item:nth-child(5) {
+      grid-column: 4;
+    }
+  </style>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+  </div> -->
+
+  <!-- <style>
+    .container {
+      border: 4px solid black;
+      display: grid;
+      grid-template-rows: repeat(3, 100px);
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-flow: column dense;
+      color: white;
+    }
+    .container .item {
+      border: 2px solid;
+      font-size: 20px;
+      background-color: midnightblue;
+    }
+    .container .item:nth-child(1) {
+      grid-column: 2 / span 2;
+    }
+    .container .item:nth-child(2) {
+      grid-column: span 3;
+    }
+  </style>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div> -->
+
+  <!-- <style>
+    .container {
+      width: 500px; 
+      height: 500px;
+      border: 4px solid;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: end;
+      align-items: normal;
+    }
+    .container .item {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      border: 2px solid;
+    }
+  </style>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+  </div> -->
+
+  <!-- <style>
+    .container {
+      border: 4px solid;
+      display: grid;
+      grid-template-rows: repeat(4, 100px);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "header header header"
+        "main main aside"
+        ". . aside"
+        "footer footer footer";
+      grid-gap: 10px;
+    }
+    .container > * {
+      border: 2px solid;
+    }
+    .container header { grid-area: header; }
+    .container main { grid-area: main; } 
+    .container aside { grid-area: aside; }
+    .container footer { grid-area: footer; }
+  </style>
+  <div class="container">
+    <header>HEADER</header>
+    <main>MAIN</main>
+    <aside>ASIDE</aside>
+    <footer>FOOTER</footer>
+  </div> -->
+
+  <!-- <style>
+    .container {
+      width: 300px;
+      height: 300px;
+      border: 4px solid;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .container .item {
+      border: 2px solid;
+      background-color: skyblue;
+      font-size: 20px;
+    }
+    .container .item:nth-child(1) {
+      grid-row: 1 / 3;
+      grid-column: 1 / 3;
+    }
+  </style>
+  <div class="container">
+    <div class="item">1</div>
+  </div> -->
+
+  <!-- <style>
+    .container {
+      width: 400px;
+      height: 400px;
+      border: 4px solid;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .container .item {
+      width: 100px;
+      height: 100px;
+      border: 2px solid black;
+      background-color: royalblue;
+      color: white;
+    }
+    .container .item:nth-child(1) {
+      justify-self: center;
+      align-self: start;
+    }
+    .container .item:nth-child(2) {
+      width: auto;
+      height: auto;
+      justify-self: normal;
+      align-self: normal;
+    }
+  </style>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div> -->
+
+  <!-- order -->
+
+  <!-- <style>
+    .container {
+      border: 4px solid;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .container .item {
+      border: 2px solid;
+      background-color: orange;
+      font-size: 40px;
+    }
+    .container .item:nth-child(3) {
+      order: -1;
+    }
+  </style>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div> -->
+
+  <style>
+    .container {
+      width: 400px;
+      height: 250px;
+      border: 4px solid;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .container .item {
+      border: 4px solid;
+      font-size: 40px;
+    }
+    .container .item:nth-child(1) {
+      background-color: tomato;
+      grid-row: 1;
+      grid-column: 1 / span 2;
+    }
+    .container .item:nth-child(2) {
+      background-color: orange;
+      grid-row: 1 / span 2;
+      grid-column: 2;
+    }
+    .container .item:nth-child(3) {
+      background-color: yellowgreen;
+      grid-column: 2 / span 2;
+      grid-row: 2;
+      z-index: -1;
+    }
+  </style>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+</body> 
+</html>
