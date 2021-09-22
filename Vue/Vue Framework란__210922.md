@@ -176,3 +176,141 @@ const App = {
 어썸👍👍👍
 
 ![result](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ac9c9365-3aa6-4a5b-b00d-c4d7b43d42ae/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T075718Z&X-Amz-Expires=86400&X-Amz-Signature=075f42a4b9c2c9a38024e2777731c08a9eea8c664df1e956b24707679c964937&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+## v-for
+
+`for`문을 이용하여 쉽게 렌더링할 수 있는 기능도 마련되어 있다!
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <style>
+    .orange {
+      font-size: 5rem;
+      color: orange;
+    }
+  </style>
+  <div id="app">
+    <ul>
+      <li v-for="fruit in fruits">
+        {{ fruit }}
+      </li>
+    </ul>
+  </div>
+  <script>
+    const App = {
+      data() {
+        return {
+          fruits: [
+            'Apple', 'Banana', 'Cherry'
+          ]
+        }
+      }
+    }
+
+    const app = Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
+```
+
+![v-for](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0fb4c8c7-2a98-48f0-847a-f9c197041e7e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T084920Z&X-Amz-Expires=86400&X-Amz-Signature=338b7088afc3016c97fe37f444a668187037fb4094660a77b6445c8265089264&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+## component
+
+컴포넌트에 대한 템플릿과 `props`를 따로 만들 수도 있다.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <style>
+    .orange {
+      font-size: 5rem;
+      color: orange;
+    }
+  </style>
+  <div id="app">
+    <ul>
+      <fruit-item v-for="fruit in fruits" v-bind:fruit-name="fruit"></fruit-item>
+    </ul>
+  </div>
+  <script>
+    const FruitItem = {
+      template: '<li>{{ fruitName }}</li>',
+      props: ['fruitName']
+    }
+    const App = {
+      components: {
+        FruitItem
+      },
+      data() {
+        return {
+          fruits: [
+            'Apple', 'Banana', 'Cherry'
+          ]
+        }
+      }
+    }
+
+    const app = Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
+```
+
+![vue component](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/80ed318f-0142-4c81-8d1e-fbe5dfe1ae81/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T084956Z&X-Amz-Expires=86400&X-Amz-Signature=073a2914c0af17c85440a3c8627d9e0629f1707944d2675dee6e5eab1bf1872b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+## 사용자 입력 핸들링
+
+## v-model
+
+양방향으로 바인딩해줄 수 있다!
+
+## 조건문
+
+## v-if
+
+렌더링에 있어 조건문을 달아줄 수도 있다.
+
+```html
+<div id="conditional-rendering">
+  <span v-if="seen">You can see me!</span>
+</div>
+```
+
+```jsx
+const ConditionalRendering = {
+  data() {
+    return {
+      seen: true
+    }
+  }
+}
+
+Vue.createApp(ConditionalRendering).mount('#conditional-rendering')
+```
+
+## 컴포넌트로 조립하기
+
+컴포넌트는 **작고 독립적이며(modulization)**
+
+재사용이 가능한(**re-usable**) 단위.
+
+**컴포넌트의 결합으로 구성되는 애플리케이션,  
+애플리케이션 인터페이스는 마치 DOM 처럼 트리로 추상화가 가능하다.**
