@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS filter</title>
+</head>
+<body>
+  <style>
+    .container {
+      filter: hue-rotate(150deg);
+    }
+    .container .item {
+      width: 8rem;
+      height: 8rem;
+      background-image: linear-gradient(orange, royalblue);
+    }
+    .container img {
+      width: 15rem;
+    }
+    .cover {
+      position: fixed;
+      width: 10rem;
+      height: 15rem;
+      border: 4px solid;
+      top: 2rem;
+      left: 2rem;
+      backdrop-filter: blur(10px);
+    }
+  </style>
+  <div class="container">
+    <div class="item"></div>
+    <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" alt="파이어폭스">
+  </div>
+  <div class="cover"></div>
+</body>
+</html>
