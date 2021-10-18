@@ -1,5 +1,3 @@
-![https://jess2.github.io/images/react.png](https://jess2.github.io/images/react.png)
-
 # React.memo ?
 
 - 함수 컴포넌트는 자신의 상태가 변경될 때 리렌더링
