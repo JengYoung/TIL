@@ -27,8 +27,6 @@
 </div>
 ```
 
-![적용 이전](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f4729502-5710-4140-81db-bf413eae0fd2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102624Z&X-Amz-Expires=86400&X-Amz-Signature=e227745cd935e37abd87d08197746c68b3266606e44bcb6ea798546281287099&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
 하지만 이때, `flex`를 준다면 자식들이 수평 정렬이 된다!
 
 ```html
@@ -50,8 +48,6 @@
   <div class="item">3</div>
 </div>
 ```
-
-![flex 적용](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f30919a9-a977-4c2d-95e6-e05e9d17eff7/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102645Z&X-Amz-Expires=86400&X-Amz-Signature=8a660cb012c6f882f1b9c7cc374971eb2185e6ae6b900325274ec64b24fc26a9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 굳이 왜 나눠?!
 
@@ -134,13 +130,11 @@
 </style>
 ```
 
-![flex-shrink, flex-wrap](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ab60c0a7-82fc-4d03-a176-3f5d4989b337/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102732Z&X-Amz-Expires=86400&X-Amz-Signature=005dba57b19ef9b7c7986bcc81e8f1b5640a39c111856739d4d56a0ba793c4c6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `justify-content`
 
 주 축에 설정해줄 정렬 방법
 
-![justify-content](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/52af25de-6061-4c05-b531-732059a4b70e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102743Z&X-Amz-Expires=86400&X-Amz-Signature=61ec5aa9b8f706c055d6cd4a3522f37fc87cab22f7fcade5fc806d26daf0c379&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ```html
 <div class="container">
@@ -190,15 +184,12 @@
 </style>
 ```
 
-![align-items](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4d53f493-b3c2-4e40-b5b4-17a1ac155c8f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102758Z&X-Amz-Expires=86400&X-Amz-Signature=431e0633e5c5b74fc948f474e24717997c2bca8657ccf2816922c2b7eda2d088&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-### baseline
+### `baseline`
 
-또 특이한 게, `baseline`이라는 값도 있다.
-
+또 특이한 게, `baseline`이라는 값도 있다.  
 이는 문자의 기준선에 맞춰 아이템을 정렬하겠다!는 의미이다.
 
-![baseline](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/949845d0-c883-4018-ae00-1b2b0d79f4d2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102821Z&X-Amz-Expires=86400&X-Amz-Signature=14c38f368f88f571b587586b9de1f62ef86d1d4803b51e018811c317bcbb1f20&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `align-content`
 
@@ -222,12 +213,8 @@
 </style>
 ```
 
-![align-content](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/19dd4570-b064-43bd-ad28-d3d3eefe342e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102846Z&X-Amz-Expires=86400&X-Amz-Signature=8a911e487955841f0a4e9bc930e66f68231f7ac06959ed3c128c241a2ea0f9de&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
-이는 `align-content`라는 `flex`의 옵션이 `stretch`로 기본 값이 설정되어 있기 때문이다.
-
-이는 `wrap`일 때, 나머지 여백에 대해 어떻게 `wrap`된 것을 정렬할 건지를 선택해주는 것이다. 따라서 이를 `flex-start`로 바꿔줘보자.
-
+그 이유는, `align-content`라는 `flex`의 옵션이 `stretch`로 기본 값이 설정되어 있기 때문이다.  
+이는 `wrap`일 때, 나머지 여백에 대해 어떻게 `wrap`된 것을 정렬할 건지를 선택해주는 것이다. 따라서 이를 `flex-start`로 바꿔줘보자.  
 참고로 이는 `align`이라는 단어를 볼 때, 교차 축에 적용되는 옵션임을 알 수 있다!
 
 ## flex-grow
@@ -250,8 +237,6 @@
 }
 ```
 
-![flex-grow](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4c524726-7950-4d7a-a496-2d3a0f72dea9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102857Z&X-Amz-Expires=86400&X-Amz-Signature=5557540089a776921b1408a52de5d94731db83b79a33b3ebce936703eae64a10&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
 **이는 아이템 개별적으로 비율 설정도 가능하다.**
 
 ```css
@@ -260,7 +245,6 @@
 }
 ```
 
-![flex-grow-2](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0b83f103-8b2c-4489-91fb-123698610f8e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102912Z&X-Amz-Expires=86400&X-Amz-Signature=4b1a30511d110d3d3f7084ee5661c09e5a56842288a62dfa0410a8a2a145216b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 이때 의아한 것은, 이 너비 비율이 항상 지정한 만큼 되지 않는다. 그 이유는 일단 **명시된 너비를 포함한 상태에서, 나머지 여백들에 대해 증가비율을 설정하는 것이기 때문이다.**
 
@@ -310,7 +294,6 @@
 }
 ```
 
-![flex-grow-3](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/39594a7f-aad9-4896-8aa2-c79c32ed9412/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T102933Z&X-Amz-Expires=86400&X-Amz-Signature=295c476afeb982beab94de8086faadb787c1eb2cc115d54fa2d82393d570ae16&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `flex-basis`
 
@@ -338,8 +321,6 @@
 }
 ```
 
-![flex-basis-1](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/39594a7f-aad9-4896-8aa2-c79c32ed9412/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T103031Z&X-Amz-Expires=86400&X-Amz-Signature=40e838ac6928ef674f8c62578bd9c687bc6f63ea9151a8fcf57bc7f1aec6cef0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
 ```css
 .container {
   border: 4px solid;
@@ -360,7 +341,6 @@
 }
 ```
 
-![flex-basis-2](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/35d5db7f-2777-4ea6-aa78-63187039fa1c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T103011Z&X-Amz-Expires=86400&X-Amz-Signature=ab12abe4c737ea67c6d610661c7a2decce8391285f5ee977e81ae2d669df37da&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `flex`
 
@@ -368,8 +348,7 @@
 - `flex-shrink`
 - `flex-basis`
 
-를 한 번에 지정이 가능하다!
-
+를 한 번에 지정이 가능하다!  
 역시 각각의 기본값인 `flex: 0 1 auto`가 기본값이다.
 
 ### 주의할 점
@@ -395,7 +374,6 @@
 }
 ```
 
-![flex 주의사항](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/89cffa0b-7f18-4873-bc2b-b214787a3646/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T103102Z&X-Amz-Expires=86400&X-Amz-Signature=1df9e16d3adb1b0da5dfaee8f7552151b816c0fc6001ba5c033a980581e6285e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 육안으로 봐도 1: 2: 1이다. 이때, `width: 100px;`은 무시되었다.
 
@@ -418,18 +396,15 @@
 }
 ```
 
-![flex 주의사항2](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4439a590-b234-45fb-a46e-4ae67d46418b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T103117Z&X-Amz-Expires=86400&X-Amz-Signature=86505dfa909b211931417cae37ea604690637de6e6186545cf44378b836d8726&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `order`
 
-`flex-item`의 순서를 지정해준다!
-
+`flex-item`의 순서를 지정해준다!  
 음수 값도 사용할 수 있으며, 기본 값은 0이다!
 
 ## `align-self`
 
-`flex-item` 중 하나만 따로 개별적으로 지정하고 싶을 때 유용.
-
+`flex-item` 중 하나만 따로 개별적으로 지정하고 싶을 때 유용.  
 이때 기본값은 `auto`이며 (`align-items`를 상속받음) 지정 시 하나만 적용된다!
 
 ```html
@@ -466,12 +441,9 @@
 }
 ```
 
-![align-self](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/eff71375-df93-4c8c-9ff3-dbb19aea66fd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T103135Z&X-Amz-Expires=86400&X-Amz-Signature=3a0f0f5877b717b11d28dfb2318b54c3961b24c5c01e3870cb732a2fe7d4a8b9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
 ## `gap`
 
-`container`에서 설정해주는 속성이며 `flex-item`여백을 설정해준다!
-
+`container`에서 설정해주는 속성이며 `flex-item`여백을 설정해준다!  
 **아직 브라우저 지원이 잘 안 되어있는 속성이기도 하다! 하위호환성에 있어 리스크!**
 
 ```css
@@ -489,9 +461,8 @@
 }
 ```
 
-![gap](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9016f6be-9275-4a0f-b6ac-5a12d53055dc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210906%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210906T103148Z&X-Amz-Expires=86400&X-Amz-Signature=d52452a81017ce01a2cda052d32b27c5881fe91e75a26551e486d83a17cdb98b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-**이는 다음과 같은 방법으로도 해결이 가능하다!**
+이는 다음과 같은 방법으로도 해결이 가능하다.
 
 ```css
 .container {

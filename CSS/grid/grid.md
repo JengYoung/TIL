@@ -30,24 +30,17 @@
 </body>
 ```
 
-![grid-template](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dffae74e-b95c-49b4-874f-d5661393e38a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T021940Z&X-Amz-Expires=86400&X-Amz-Signature=04649db652063a21ee6ee0b991a1d79090828e011a01d408eabb43bf9a025e0b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
-**이때 블록이 쌓이는 순서는, 좌에서 우로, 위에서 밑으로 진행된다!
-또한 부모 컨테이너 쪽에서 그리드를 사용하겠다!고 명시해주면 된다.**
+이때 블록이 쌓이는 순서는, 좌에서 우로, 위에서 밑으로 진행된다!  
+또한 부모 컨테이너 쪽에서 그리드를 사용하겠다!고 명시해주면 된다.
 
 ## `grid-row[column]: span [n];`
 
-`grid`에서 특정 아이템에 관하여 `row`나 `column`을 늘리고 싶을 때,
+`grid`에서 특정 아이템에 관하여 `row`나 `column`을 늘리고 싶을 때, `span`이라는 값을 주면, n만큼의 길이를 갖도록 만들 수 있다.
 
-`span`이라는 값을 주면, n만큼의 길이를 갖도록 만들 수 있다.
-
-![grid-row[column]](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/888d9b9f-b469-4725-a501-4018cae72d10/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T021957Z&X-Amz-Expires=86400&X-Amz-Signature=82703784b261ade4596956269bc9a3fefa3c980cb3fcfeb3345c3129919903a8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `inline-grid`
 
 컨테이너의 `grid`의 block을 마치 `inline`처럼 하는 효과가 있다!
-
-![inline-grid](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5d9e07e4-e9fb-48d3-9422-b2ac653f5d9e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022010Z&X-Amz-Expires=86400&X-Amz-Signature=7cef4b22b00822fa86939d48a38551cfca23ac0ada6467990ef6617be4e347d6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ```html
 <style>
@@ -108,18 +101,15 @@
 </style>
 ```
 
-![1fr](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3cfea610-b4cb-4dc4-b870-748b93cbe7fe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022028Z&X-Amz-Expires=86400&X-Amz-Signature=d6ab9254811f15c22f825e5e48bcb7af31b167216e935dec177f3407c19e0077&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `repeat(n, size)`
 
-`grid`에서 사용 가능한 함수.
-
+`grid`에서 사용 가능한 함수.  
 n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 
 ## `grid`역시 `block` 요소이다.
 
-따라서 `height`가 `auto`라면 최대한 줄어들려 할 것이다.
-
+따라서 `height`가 `auto`라면 최대한 줄어들려 할 것이다.  
 다음 예제에서 보이듯이, 4개의 행만 `grid`로 다룰 때 나머지 요소는 `font-size`에만 높이가 설정되어 있는 것을 볼 수 있다.
 
 ```html
@@ -147,7 +137,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </div>
 ```
 
-![grid is block elem](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/623ae23b-4e5d-48d1-a253-d716f03543ca/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022046Z&X-Amz-Expires=86400&X-Amz-Signature=7c2174d158f0803894ca7932bffe5c9b231e731df89ed12673a032c3a4b5eb28&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `grid-auto-rows`
 
@@ -170,12 +159,9 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![grid-auto](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/27e819de-5ee5-4254-92da-13c6dc7d7866/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022102Z&X-Amz-Expires=86400&X-Amz-Signature=bb7b7ea79dd49ba884717f550e7f22cdcd37a93513e7612877b872843b60f3d5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
 ## `grid-column[row]`
 
-명시적으로 특정 행/열의 line (맨 앞이 1부터 시작)에 특정 아이템을 집어 넣을 수 있다.
-
+명시적으로 특정 행/열의 line (맨 앞이 1부터 시작)에 특정 아이템을 집어 넣을 수 있다.  
 이에 따라 자동으로 행, 열의 크기가 명시되며, 원치 않은 변화가 생길 수 있다.
 
 ```html
@@ -199,7 +185,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![grid-column[row]](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dc920d2e-9254-4668-991c-83d741a7d447/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022113Z&X-Amz-Expires=86400&X-Amz-Signature=28e718a9b66b7146754f33cceceaa0570416b835e9db8275bdb5c230e06a939a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 만약 ~번째 열에서 ~번째 열까지를 나타내주고 싶다면? 다음과 같이 /로 구분해주면 된다.
 
@@ -227,15 +212,12 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![grid-column[row] 2](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/13727f60-4f57-48d5-8317-22644517a282/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022128Z&X-Amz-Expires=86400&X-Amz-Signature=424f39ebb3a0fd7f3e27746418ac50324252713254ad5b76fd5db738949d4f2c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
-**결론: `grid`는 명시적으로 행/열을 지정할 수 있지만, 그 외의 벗어나는 영역에 대해서는 암시적으로 만들 수도 있다.
-또한 `grid-auto-...`로 암시적인 아이템들 역시 너비, 높이를 지정할 수 있다.**
+결론:   
+`grid`는 명시적으로 행/열을 지정할 수 있지만, 그 외의 벗어나는 영역에 대해서는 암시적으로 만들 수도 있다. 또한 `grid-auto-...`로 암시적인 아이템들 역시 너비, 높이를 지정할 수 있다.
 
 ## `grid-auto-flow`
 
-`(row는 생략 가능) dense`로 지정할 경우, 빈 공간에 대해서 최대한 줄여줄 수 있다.
-
+`(row는 생략 가능) dense`로 지정할 경우, 빈 공간에 대해서 최대한 줄여줄 수 있다.  
 기본값은 `row`이며, 행으로 순서대로 쌓이게 해준다는 의미를 갖고 있다.
 
 ```html
@@ -260,7 +242,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![grid-auto-flow](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ab5fd4a4-70da-43bc-bf73-3abef1a7763f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022150Z&X-Amz-Expires=86400&X-Amz-Signature=0e54ee0d4fc9df46fc59aeb282a8ddd2c8bde0bb7b75dedc45e6f98fbcf5b894&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 다른 예시를 살펴보면, 다음 역시도 `grid-auto-flow`를 통해 빈 공간을 메워줄 수 있다!
 
@@ -289,7 +270,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </div>
 ```
 
-![grid-auto-flow 2](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e96adcd0-f25e-449e-92a8-607cf3a2a2eb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022201Z&X-Amz-Expires=86400&X-Amz-Signature=8e9f7db51a42b32115a98d42b4bc472ec85356361d15d3653a545388670eea1d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ```html
 <style>
@@ -337,8 +317,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![grid-auto-flow:column](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/acb24046-22c4-45c7-a948-8413c7af4dfc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022218Z&X-Amz-Expires=86400&X-Amz-Signature=2e5c49f45b621e8cab11a7cf041ef13e5e4e28cd11b39a2e02292412825db33e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
 `grid-auto-flow`의 값으로 `column dense` 역시 사용 가능하다.
 
 ```html
@@ -365,7 +343,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![grid-auto-flow: column dense;](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b79e8e48-0944-4718-b9d8-a58ec300ecdd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022341Z&X-Amz-Expires=86400&X-Amz-Signature=d0b01599ae774f31faafcb7d0da6304e9a31960d97e9c5e821e56102e3620239&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `grid contents`
 
@@ -402,8 +379,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </div>
 ```
 
-![grid-contents](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2c2203ec-d409-466a-b6ec-75586cbf2988/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022356Z&X-Amz-Expires=86400&X-Amz-Signature=09235abc75f0332252bfe593713d155b60cfce88d9c58fd92a6f73fb5b794ef0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
 ```html
 <style>
   .container {
@@ -423,28 +398,20 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![justify[align]-content](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5d5f75a2-72e7-4fd5-a843-93c0ad04681f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022407Z&X-Amz-Expires=86400&X-Amz-Signature=bd37a876cd3d8842ca181277db5b7d9fe2dcb02685b2bd57ee0d139abddc30f3&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 기타 속성 값으로는
 
-`space-evenly`
-
-`space-around`
-
-`space-between`
-
-`start`
-
-`end`
-
-`center`
-
-`stretch`: 만약 너비나 길이가 정해져 있지 않으면 끝까지 쭉 늘어나려는 성질을 가지게 됨. (`normal` 속성과 동일)
+- `space-evenly`
+- `space-around`
+- `space-between`
+- `start`
+- `end`
+- `center`
+- `stretch`: 만약 너비나 길이가 정해져 있지 않으면 끝까지 쭉 늘어나려는 성질을 가지게 됨. (`normal` 속성과 동일)
 
 ## `justify-items` `align-items`
 
-그리드로 나누어진 각 셀마다의 정렬 방법을 지정
-
+그리드로 나누어진 각 셀마다의 정렬 방법을 지정한다.  
 이때, 어차피 셀에는 한 아이템만 있으므로 `space-` 값은 없다.
 
 ```html
@@ -506,7 +473,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </div>
 ```
 
-![grid-template-area](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2d5e2db7-2467-4a91-b8a9-7583d51c8a6f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022418Z&X-Amz-Expires=86400&X-Amz-Signature=c3130b811a4c1ccda7065b361dbc07624b375ab6f919c31c556616195f8a3786&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `grid-gap`
 
@@ -544,18 +510,14 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![grid-gap](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/991bb743-d3c9-43a5-9b46-ae5650e5ba2c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022432Z&X-Amz-Expires=86400&X-Amz-Signature=62b4cceaaef4512808455d11c872aa06a5adfdc3360cedac9845b51c92584148&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
 ## grid의 line에 관하여
 
-`line`의 경우 양수의 값으로도, 음수의 값으로도 가질 수 있다!
-
+`line`의 경우 양수의 값으로도, 음수의 값으로도 가질 수 있다!  
 앞에서 시작할 경우 1부터 시작하고, 뒤에서 시작할 경우, -1부터 시작한다!
 
 ## `grid-row[column]-start`
 
-몇 번째 행에서 시작할 지를 명시해준다.
-
+몇 번째 행에서 시작할 지를 명시해준다.  
 `span` 값을 사용할 수 있으며, 이는 현재로부터 몇까지 확장하게 해라!라는 의미이다.
 
 ```html
@@ -579,7 +541,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![grid-row-start](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/57fb334f-b47c-42d4-83bf-15cf64f052b8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022459Z&X-Amz-Expires=86400&X-Amz-Signature=caa0a7204ac044716d9c87e94d48d84fbe7b1ce94a2ea7b7cdff33c991364255&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `grid-row[column]-end`
 
@@ -589,7 +550,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 .container .item:nth-child(1) { grid-row-start: 2; grid-row-end: 4; }
 ```
 
-![grid-row[column]-end](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/51cb7f51-68d5-4430-ab2a-f9d7b68fa70b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022507Z&X-Amz-Expires=86400&X-Amz-Signature=5b7aae7c053f0c36192e5cd288409a37529556dca8378c7076b317a88100be8a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `grid-row[column]`
 
@@ -619,7 +579,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![grid-row](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/59c7a193-60e2-44f9-ab3f-ab4a82a4ce76/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022517Z&X-Amz-Expires=86400&X-Amz-Signature=fc78678c70fce98be2cd4ed1a20755d1dfa6b403788a2240f7dbe35fda7ab83e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `justify[align]-self`
 
@@ -655,7 +614,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </style>
 ```
 
-![justify[align]-self](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/77ad0488-4197-41a5-a614-2fb15d50d305/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022528Z&X-Amz-Expires=86400&X-Amz-Signature=70f2dae399ce016d7855b7b8e8cff272ffb3f4b6dd8dce8d63cdb8612288903b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `order`
 
@@ -687,12 +645,10 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </div>
 ```
 
-![order](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3f6ef1c9-ecd2-43dd-8c26-3644f9a2f961/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022546Z&X-Amz-Expires=86400&X-Amz-Signature=62e734c1241a2fd7552632a20db84ebb85e396f33f2cb1b3653b8e9edc8b19b2&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `grid`의 쌓임 맥락
 
-`**grid-row`와 `grid-column`이 명시되어야 겹칠 수 있다!\*\*
-
+`**grid-row`와 `grid-column`이 명시되어야 겹칠 수 있다!  
 이때 쌓이는 건 예전 → 최신 순서로 쌓인다.
 
 **이때 만약 둘 다 겹친다면, `z-index`를 활용하여 쌓이는 순서를 정해줄 수 있다.**
@@ -732,8 +688,6 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </div>
 ```
 
-![grid stacking context](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/936f7a3e-a366-42a4-a0e1-edd8b31ac6ca/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022557Z&X-Amz-Expires=86400&X-Amz-Signature=22205d68c1ead3c2e10d8a0ac39ac7d0427095dd40355a646fd0d08343234de9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
-
 ```html
 <style>
   .container {
@@ -772,20 +726,21 @@ n만큼의 개수에 맞춰 `size`에 맞는 `grid`를 만든다!
 </div>
 ```
 
-![grid stacking context 2](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f303d5f5-d3b8-4240-9b1a-79d2b7a27f0f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210922%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210922T022612Z&X-Amz-Expires=86400&X-Amz-Signature=c6479857c8bb7b77f36d756fd216c5e79898e8a9189832f3176edabff31e5a5f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 ## `minmax`
 첫 번째 인자로 최솟값, 두 번째 인자로 최댓값을 적어준다.
+
 ```css
 grid-template-columns: minmax(100px, 1fr) minmax(200px, 1fr);
 ```
 
-만약 컨테이너가 더 작아질 경우, 아이템들이 넘쳐나는 현상을 볼 수 있다.
-
+만약 컨테이너가 더 작아질 경우, 아이템들이 넘쳐나는 현상을 볼 수 있다.  
 `grid-auto-rows, grid-auto-columns`에 또 `minmax`를 지정해주면, 결과적으로 암시적 행의 넘쳐나는 부분에 대해서 자동으로 늘려줄 수 있다.
+
 ```css
 grid-auto-rows: minmax(100px, auto);
 ```
+
 
 ## `fit-content`
 최대한 너비를 맞춰주되, 너비의 한계치를 지정해줄 수도 있다.
@@ -794,24 +749,30 @@ grid-auto-rows: minmax(100px, auto);
 grid-template-columns: fit-content(300px) fit-content(300px);
 ```
 
-## `min-content`
-최소한의 `content` 길이에 맞춰 너비를 설정한다.
 
+## `min-content`
+최소한의 `content` 길이에 맞춰 너비를 설정한다.  
 특이한 것은, 한글의 경우 **글자 단위**로 인식하며, 영어의 경우 **인식할 수 있는 단어 단위**로 인식한다.
+
 
 
 ## `max-content`
 최대한의 `content` 길이에 맞춰 너비를 설정한다.
 
+
 ## `word-break`
 `min-content`를 보완.  
+
+
 ### `keep-all`
 한글도 단어 단위로 줄바꿈 처리를 하도록 돕는다.
+
 
 ## `auto-fit` / `auto-fill`
 `repeat` 함수와 같이 사용할 수 있다.
 
 + `auto-fit`: 지정할 수 있는 너비의 최대에 맞춰서 적용
 + `auto-fill`: 지정할 수 있는 너비의 최소에 맞춰서 적용
++ 
 ```css
 grid-template-coilumns: repeat(auto-fit, minmax(100px, 1fr));
