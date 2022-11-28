@@ -9,34 +9,8 @@
 > Amplify는 JavaScript, React, Angular, Vue, Next.js 등의 널리 사용되는 웹 프레임워크와 Android, iOS, React Native, Ionic, Flutter 등의 모바일 플랫폼을 지원
 
 1.  React 애플리케이션을 생성하여 GitHub 리포지토리에 푸시합니다.
-
 2.  해당 리포지토리를 AWS Amplify 웹 호스팅 서비스에 연결
 3.  amplifyapp.com 도메인에서 호스팅되는 전 세계에서 사용 가능한 CDN(콘텐츠 전송 네트워크)에 배포
-
 4.  React 애플리케이션 변경을 통해 지속적인 배포 기능을 설명하고 새로운 버전을 마스터 브랜치에 푸시하여 자동으로 새로운 배포를 시작
 
 (해보니까, 이 부분은 사실 굉장히 간단하다. 학습하기 부분을 그대로 따라하면 되는듯!!!)
-
----
-
-하다가 `amplify init`을 통해 유저를 생성
-
-유저의 액세스 키와 시크릿 키를 넣어서, 결과적으로 뭔가 됐는데, 불안하다...
-
-```
-Some next steps:
-"amplify status" will show you what you've added already and if it's locally configured or deployed
-
-"amplify add <category>" will allow you to add features like user login or a backend API
-
-"amplify push" will build all your local backend resources and provision it in the cloud
-
-"amplify console" to open the Amplify Console and view your project status
-
-"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
-
-Pro tip:
-Try "amplify add api" to create a backend API and then "amplify publish" to deploy everything
-```
-
-흠... 잘된 거겠지?

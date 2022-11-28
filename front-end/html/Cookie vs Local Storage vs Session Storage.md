@@ -1,5 +1,10 @@
-- **공통점:** 데이터를 클라이언트에서 관리, 저장한다는 점(쿠키 역시 `Modern Storage APIs` 전에는 저장 용도로 사용 - 현재 웹 스토리지가 지원되는 이후로 비권장)
-- **차이점:**
+## 공통점과 차이점
+
+### 공통점 
+
+데이터를 클라이언트에서 관리, 저장한다는 점(쿠키 역시 `Modern Storage APIs` 전에는 저장 용도로 사용 - 현재 웹 스토리지가 지원되는 이후로 비권장)
+
+### 차이점
 
 1. `Storage`와 `Cookie`는 **서버 전달 여부**에서 차이가 있다.
    - LocalStorage, SessionStorage: window 객체에서 저장. 서버 전달 X
@@ -8,9 +13,9 @@
    - LocalStorage: 브라우저가 종료돼도 저장. (직접 삭제 전까지 저장)
    - SessionStorage: 페이지 세션 종료 시 데이터 소멸(일회성이 강함)
 
-**기타**
+### 기타
 
-- Cookie는 **유효기간을 따로 설정할 수 있다는 측면에서 장점**을 갖고 있다.
+Cookie는 **유효기간을 따로 설정할 수 있다는 측면에서 장점**을 갖고 있다.
 
 ---
 
@@ -32,25 +37,6 @@
 - **종료 기준: 브라우저가 열려있는 한(새로고침& 페이지 복구에서도 유지)**
 - 페이지 세션이 기준이기 때문에, **각각의 탭/창마다 생성.** 즉 해당 탭/창이 종료될 때까지 유지!
 
-three-way handshake connectionless
-
-client → 야 난데, 데이터 보낼껀데 괜춘? 전화를 끊어요
-
-서버 → 오케, 잘 받았음. 데이터 보내도 됨. 전화 끊음
-
-client → 오케 간다간다 → 연결
-
-udp → socket 뚜껑 열어서 누가 받든 그냥 계속 뿌리는거
-
-stateless → http 3way handshake
-
-리액트 → 서버로 데이터 전송 요청 보냄
-
-서버쪽: 누가 어떤 데이터를 요청했었는지, 어느 주소에 있는지
-
-request = { hosturl: 245.0.03.14, port: 5000, }
-
-웹소켓 프로그래밍 → firebase, 실시간 채팅, 영상 stateful connection
 
 ### `Cookie`
 
@@ -61,19 +47,15 @@ request = { hosturl: 245.0.03.14, port: 5000, }
 - 서버에서 클라이언트에게 응답 시, Set-Cookie HTTP 응답 헤더를 전송 가능 → 이를 통해 클라이언트에게 해당 쿠키를 저장하라고 전달 → 브라우저는 Cookie 헤더를 사용, 저장했던 모든 쿠키들을 회신
 - 워낙 쿠키의 경우, **데이터 보안에 취약(XSS, CSRF)**하기에, 다음과 같은 속성들을 설정한다.
 
-  `httponly` JS를 통한 추출 방지, 세션 하이재킹과 XSS에 대한 보안
+  1. `httponly`:  JS를 통한 추출 방지, 세션 하이재킹과 XSS에 대한 보안  
+  2. `Expires` 쿠키 만료 기한 설정. (서버가 아닌 클라이언트에 상대적)  
+  3. `Secure` HTTPS 프로토콜 상에서 암호화된 요청일 경우에만 전송
+  4. `samesite`
+     - `strict` 쿠키 전송을 first-party cookie로만 제한
+     - `lax` Chrome80버전 이후로 기본값이 됨. `strict`와 비슷하지만 일부에서 예외를 허용
+     - `none` Third party context에서도 쿠키를 사용해도 된다는 것을 의미
 
-  `Expires` 쿠키 만료 기한 설정. (서버가 아닌 클라이언트에 상대적)
-
-  `Secure` HTTPS 프로토콜 상에서 암호화된 요청일 경우에만 전송
-
-  `samesite`
-
-  - `strict` 쿠키 전송을 first-party cookie로만 제한
-  - `lax` Chrome80버전 이후로 기본값이 됨. `strict`와 비슷하지만 일부에서 예외를 허용
-  - `none` Third party context에서도 쿠키를 사용해도 된다는 것을 의미
-
-  [https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMe3tm%2FbtqBoPWFr2U%2FWRLDUFGNzsa8zwSO6yIh21%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMe3tm%2FbtqBoPWFr2U%2FWRLDUFGNzsa8zwSO6yIh21%2Fimg.png)
+  ![https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMe3tm%2FbtqBoPWFr2U%2FWRLDUFGNzsa8zwSO6yIh21%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMe3tm%2FbtqBoPWFr2U%2FWRLDUFGNzsa8zwSO6yIh21%2Fimg.png)
 
 쿠키에 대한 주요 설명은 이 외에도 참고할 것이 너무 많다.
 

@@ -23,9 +23,8 @@
 </p>
 ```
 
-실제로 결과는 같게 보이지만, 의미론적으로 본다면 강조하는 `strong`이 더욱 적합하다.
-
-사람도 이렇게 헷갈리는데, 특히 \*\*\*\*컴퓨터는 정보의 의미의 중요도를 알 수가 없는 노릇이다!
+실제로 결과는 같게 보이지만, 의미론적으로 본다면 강조하는 `strong`이 더욱 적합하다.  
+사람도 이렇게 헷갈리는데, 특히 컴퓨터는 정보의 의미의 중요도를 알 수가 없는 노릇이다!
 
 결국에, 검색 엔진은 중요한 **의미를 모르기 때문에 검색 순위를 최적화하기 어려워지고**, 사용자는 원하는 정보를 제때 찾을 수 없기에 불편함이 발생한다.
 
@@ -182,12 +181,8 @@
 
 ## 📃 참고하면 좋은 자료
 
-[참고 1. W3CSchools - html5_semantic_elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
-
-[참고 2. MDN - Semantics](https://developer.mozilla.org/ko/docs/Glossary/Semantics#%EC%9D%98%EB%AF%B8%EB%A1%A0%EC%A0%81_%EC%9A%94%EC%86%8Celement%EB%93%A4)
-
-[참고 3. MDN - 콘텐츠 카테고리](https://developer.mozilla.org/ko/docs/Web/Guide/HTML/Content_categories#%EC%A0%9C%EB%AA%A9_%EC%BD%98%ED%85%90%EC%B8%A0)
-
-[참고 4. MDN - ARIA](https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA)
-
+[참고 1. W3CSchools - html5_semantic_elements](https://www.w3schools.com/html/html5_semantic_elements.asp)  
+[참고 2. MDN - Semantics](https://developer.mozilla.org/ko/docs/Glossary/Semantics#%EC%9D%98%EB%AF%B8%EB%A1%A0%EC%A0%81_%EC%9A%94%EC%86%8Celement%EB%93%A4)  
+[참고 3. MDN - 콘텐츠 카테고리](https://developer.mozilla.org/ko/docs/Web/Guide/HTML/Content_categories#%EC%A0%9C%EB%AA%A9_%EC%BD%98%ED%85%90%EC%B8%A0)  
+[참고 4. MDN - ARIA](https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA)  
 [참고 5. HTML - 접근성을 위한 기초](https://developer.mozilla.org/ko/docs/Learn/Accessibility/HTML)
