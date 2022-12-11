@@ -4,7 +4,6 @@
   },
   "dependencies": {
     "dotenv": "^10.0.0",
-    "normalize-css": "^2.3.1",
     "tdd-jasmine": "workspace:*"
   },
   "devDependencies": {

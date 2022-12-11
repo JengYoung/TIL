@@ -1,6 +1,12 @@
 module.exports = function(config) {
   config.set({
     frameworks: ['jasmine'],
+    plugins: Object.keys(require('./package').devDependencies).flatMap(
+      (packageName) => {
+        if (!packageName.startsWith('karma-')) return []
+        return [require(packageName)]
+      }
+    ),
     files: [
       {
         pattern: './test/*.js',
@@ -13,10 +19,6 @@ module.exports = function(config) {
     ],
     autoWatch: true,
     singleRun: false,
-    browsers: ['Chrome'],
-    plugins: [
-      'karma-chrome-launcher',
-      'karma-jasmine'
-    ],
+    browsers: ['Chrome']
   });
 }

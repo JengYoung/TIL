@@ -5,12 +5,10 @@ importers:
   .:
     specifiers:
       dotenv: ^10.0.0
-      normalize-css: ^2.3.1
       parcel-bundler: ^1.12.5
       tdd-jasmine: workspace:*
     dependencies:
       dotenv: 10.0.0
-      normalize-css: 2.3.1
       tdd-jasmine: link:programmings/tdd/jasmine
     devDependencies:
       parcel-bundler: 1.12.5
@@ -3405,10 +3403,6 @@ packages:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
     dev: true
 
-  /insert-css/0.0.0:
-    resolution: {integrity: sha512-PwixL1rVtKkM1gz43tEHwZ2sUOYmWB5zk/9YiEmOxERqjfIkkMY4jwrl3v3e9NLzblEdkBuMLiTLm/0sHMx4qA==}
-    dev: false
-
   /internal-slot/1.0.3:
     resolution: {integrity: sha512-O0DB1JC/sPyZl7cIo78n5dR7eUSwwpYPiXRhTzNxZVAMUuB8vlnRFyLxdrVToks6XPLVnFfbzaVd5WLjhgg+vA==}
     engines: {node: '>= 0.4'}
@@ -4189,12 +4183,6 @@ packages:
   /node-releases/2.0.6:
     resolution: {integrity: sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg==}
     dev: true
-
-  /normalize-css/2.3.1:
-    resolution: {integrity: sha512-70Lnkke3P+8ehu56S0M0yoUTgTve/rCrEncjdgPmKER/TLZMRa30rFLW7Yv3iGZldmGV4bGevGW47VOfZJbGyw==}
-    dependencies:
-      insert-css: 0.0.0
-    dev: false
 
   /normalize-path/2.1.1:
     resolution: {integrity: sha512-3pKJwH184Xo/lnH6oyP1q2pMd7HcypqqmRs91/6/i2CGtWwIKGCkOOMTm/zXbgTEWHw1uNpNi/igc3ePOYHb6w==}
