@@ -1,4 +1,4 @@
-import DIContainer from "./DIContainer";
+import DIContainer from "./DIContainer.js";
 
 const MyApp = {};
 
