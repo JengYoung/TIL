@@ -9,7 +9,7 @@ module.exports = function(config) {
     ),
     files: [
       {
-        pattern: './test/*.js',
+        pattern: './test/**/*.js',
         type: 'module'
       },
       {

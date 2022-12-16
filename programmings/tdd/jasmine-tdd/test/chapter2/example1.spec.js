@@ -1,5 +1,5 @@
-import ReservationSaver from "../src/chapter2/saveReservation.js";
-import createReservation from "../src/chapter2/createReservation.js";
+import ReservationSaver from "../../src/chapter2/saveReservation.js";
+import createReservation from "../../src/chapter2/createReservation.js";
 
 describe('createReservation', function() {
   let testFlight = null;

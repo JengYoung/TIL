@@ -1,4 +1,4 @@
-import DIContainer from '../src/chapter2/DIContainer.js'
+import DIContainer from '../../src/chapter2/DIContainer.js'
 
 describe('DIContainer', () => {
   let container;
@@ -27,7 +27,6 @@ describe('DIContainer', () => {
     })
 
     it('성명이 등록되어 있지 않다면 undefined를 반환한다', () => {
-      console.log(container.get('notDefined'))
       expect(container.get('notDefined')).toBeUndefined();
     })
 
@@ -38,7 +37,6 @@ describe('DIContainer', () => {
       container.register(name, [], function() {
         return returnFromRegisteredFunction;
       })
-      console.log(container.name)
 
       expect(container.get(name)).toBe(returnFromRegisteredFunction);
     })

@@ -1,4 +1,4 @@
-import Aop from "../src/chapter2/AOP.js";
+import Aop from "../../src/chapter2/AOP.js";
 
 describe('AOP', () => {
   let targetObj;
