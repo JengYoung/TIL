@@ -2,6 +2,7 @@ export const Conference = {};
 
 Conference.attendee = function(firstname, lastname) {
   let checkedIn = false;
+  let checkInNumber;
   const first = firstname || 'None';
   const last = lastname || 'None';
 
@@ -14,6 +15,12 @@ Conference.attendee = function(firstname, lastname) {
     },
     checkIn() {
       checkedIn = true
+    },
+    getCheckInNumber() {
+      return checkInNumber;
+    },
+    setCheckInNumber(number) {
+      checkInNumber = number;
     }
   }
 }

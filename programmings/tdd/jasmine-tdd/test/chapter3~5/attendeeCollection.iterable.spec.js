@@ -1,4 +1,4 @@
-import { Conference } from "../../src/chapter3/callback.js"
+import { Conference } from "../../src/chapter3~5/callback.js"
 
 
 describe('Conference.attendeeCollection', function() {
