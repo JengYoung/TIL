@@ -3,6 +3,8 @@ const Aop = {
     // 처음 버전이라 하는 일이 없다.
     const originalFn = fnObj[fnName];
 
+    // console.log(fnObj, fnName, advice)
+
     fnObj[fnName] = function() {
       return advice.call(this, { fn: originalFn, args: arguments })
     }
