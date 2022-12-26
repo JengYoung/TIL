@@ -25,6 +25,22 @@ importers:
       karma-chrome-launcher: 3.1.1
       karma-jasmine: 5.1.0_karma@6.4.1
 
+  programmings/tdd/jasmine-tdd:
+    specifiers:
+      jasmine: ^4.5.0
+      jasmine-ajax: ^4.0.0
+      karma: ^6.4.1
+      karma-chrome-launcher: ^3.1.1
+      karma-jasmine: ^5.1.0
+      karma-jasmine-ajax: ^0.1.13
+    devDependencies:
+      jasmine: 4.5.0
+      jasmine-ajax: 4.0.0
+      karma: 6.4.1
+      karma-chrome-launcher: 3.1.1
+      karma-jasmine: 5.1.0_karma@6.4.1
+      karma-jasmine-ajax: 0.1.13_karma@6.4.1
+
 packages:
 
   /@ampproject/remapping/2.2.0:
@@ -3710,6 +3726,14 @@ packages:
     resolution: {integrity: sha512-Yljz7ffyPbrLpLngrMtZ7NduUgVvi6wG9RJ9IUcyCd59YQ911PBJphODUcbOVbqYfxe1wuYf/LJ8PauMRwsM/g==}
     dev: true
 
+  /jasmine-ajax/3.4.0:
+    resolution: {integrity: sha512-LIVNVCmx5ou+IG6wgX7j73YYzvE2e3aqFWMjOhvAHWTnLICOYSobIH+PG/gOwtP20X0u2SkD3NXT/j5X8rMGOA==}
+    dev: true
+
+  /jasmine-ajax/4.0.0:
+    resolution: {integrity: sha512-htTxNw38BSHxxmd8RRMejocdPqLalGHU6n3HWFbzp/S8AuTQd1MYjkSH3dYDsbZ7EV1Xqx/b94m3tKaVSVBV2A==}
+    dev: true
+
   /jasmine-core/4.5.0:
     resolution: {integrity: sha512-9PMzyvhtocxb3aXJVOPqBDswdgyAeSB81QnLop4npOpbqnheaTEwPc9ZloQeVswugPManznQBjD8kWDTjlnHuw==}
     dev: true
@@ -3833,6 +3857,15 @@ packages:
     resolution: {integrity: sha512-hsIglcq1vtboGPAN+DGCISCFOxW+ZVnIqhDQcCMqqCp+4dmJ0Qpq5QAjkbA0X2L9Mi6OBkHi2Srrbmm7pUKkzQ==}
     dependencies:
       which: 1.3.1
+    dev: true
+
+  /karma-jasmine-ajax/0.1.13_karma@6.4.1:
+    resolution: {integrity: sha512-5eKFqStB/IfODMghdJR2ryBiZt8bl6Dykjkbm6e58aIDFoaUefCzewq9EjZEiAcJ7rKQ8bivxWgbqJJ2qKZo+A==}
+    peerDependencies:
+      karma: '>=0.12.0'
+    dependencies:
+      jasmine-ajax: 3.4.0
+      karma: 6.4.1
     dev: true
 
   /karma-jasmine/5.1.0_karma@6.4.1:

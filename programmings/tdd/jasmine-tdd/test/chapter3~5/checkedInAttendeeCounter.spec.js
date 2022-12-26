@@ -5,17 +5,14 @@ describe('Conference.checkedInAttendeeCounter', () => {
 
   beforeEach(() => {
     counter = Conference.checkedInAttendeeCounter();
-    console.log(counter)
   })
 
-  describe('increment()', () => {
-    // increment
-    it(() => {})
-  })
-  describe('getCount()', () => {
-    // getCount
-    it(() => {})
-  })
+  // describe('increment()', () => {
+  //   // increment
+  // })
+  // describe('getCount()', () => {
+  //   // getCount
+  // })
   describe('countIfCheckedIn(attendee)', () => {
     let attendee;
 

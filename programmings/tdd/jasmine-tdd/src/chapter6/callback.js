@@ -3,10 +3,17 @@ export const Conference = {};
 Conference.attendee = function(firstname, lastname) {
   let checkedIn = false;
   let checkInNumber;
+  let attendeeId;
   const first = firstname || 'None';
   const last = lastname || 'None';
 
   return {
+    setId(id) {
+      attendeeId = id;
+    },
+    getId() {
+      return attendeeId;
+    },
     get fullName() {
       return `${first} ${last}`
     },
@@ -17,7 +24,6 @@ Conference.attendee = function(firstname, lastname) {
       checkedIn = true
     },
     getCheckInNumber() {
-      console.log("HIHI")
       return checkInNumber;
     },
     setCheckInNumber(number) {
@@ -64,31 +70,33 @@ Conference.checkInService = function(checkInRecorder) {
 
   return {
     checkIn: function(attendee) {
-      attendee.checkIn();
+      return new Promise((resolve, reject) => {
+        attendee.checkIn();
 
-      return recorder.recordCheckIn(attendee).then(
-        function onRecordCheckInSucceded(checkInNumber) {
-          attendee.setCheckInNumber(checkInNumber);
-          return Promise.resolve(checkInNumber);
-        },
-        function onRecordCheckInFailed(reason) {
-          attendee.undoCheckIn();
-          return Promise.reject(reason);
-        }
-      )
+        recorder.recordCheckIn(attendee).then(
+          function onRecordCheckInSucceded(checkInNumber) {
+            attendee.setCheckInNumber(checkInNumber);
+            resolve(checkInNumber);
+          },
+          function onRecordCheckInFailed(reason) {
+            attendee.undoCheckIn();
+            reject(reason);
+          }
+        )
+      })
     }
   }
 }
 
-Conference.checkInRecorder = function() {
-  "use strict";
+// Conference.checkInRecorder = function() {
+//   "use strict";
 
-  return {
-    recordCheckIn(attendee) {
-      // 외부 서비스를 통해 체크인 등록한다
-    }
-  };
-};
+//   return {
+//     recordCheckIn(attendee) {
+//       // 외부 서비스를 통해 체크인 등록한다
+//     }
+//   };
+// };
 
 Conference.checkedInAttendeeCounter = function() {
   let checkedInAttendees = 0;
