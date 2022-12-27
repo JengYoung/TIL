@@ -58,6 +58,7 @@ Conference.attendeeWebAPIDecorator = function(baseWebAPI) {
         }
       );
     },
+    
     getAll() {
       return baseWebAPI.getAll().then((records) => {
         pendingPosts.forEach((pending) => {

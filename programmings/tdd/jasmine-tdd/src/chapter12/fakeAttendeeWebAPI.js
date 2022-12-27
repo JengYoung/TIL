@@ -24,9 +24,12 @@ Conference.fakeAttendeeWebAPI = function() {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           const copies = [];
-          attendees.forEach(attendee => {
-            copies.push(attendee.copy());
-          })
+          if (attendees.length) {
+            attendees.forEach(attendee => {
+              copies.push(attendee.copy());
+            })
+          }
+
           resolve(copies);
         }, 1)
       })
