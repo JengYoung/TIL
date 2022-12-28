@@ -2,7 +2,7 @@ import Aop from "../chapter2/AOP.js";
 
 export const ReliableJavaScript = {};
 
-ReliableJavaScript.contractRegistry = function() {
+ReliableJavaScript.ContractRegistry = function() {
   'use strict';
 
   const registry = {};

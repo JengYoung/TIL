@@ -2,7 +2,7 @@ import { ReliableJavaScript } from "../../src/chapter16/ReliableJavaScript.js";
 import "../../src/chapter16/ReliableJavaScript.js"
 import "../../src/chapter16/attendeeContracts.js"
 
-describe('contractRegistry', () => {
+describe('ContractRegistry', () => {
   'use strict';
 
   let registry;
@@ -11,7 +11,7 @@ describe('contractRegistry', () => {
   const arr = [1,2,3]
 
   beforeEach(() => {
-    registry = ReliableJavaScript.contractRegistry();
+    registry = ReliableJavaScript.ContractRegistry();
     registry.define(isArray, Array.isArray);
   })
 
