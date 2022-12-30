@@ -1,6 +1,6 @@
-﻿import "../../src/chapter21/Observer/Aop.js"
-import "../../src/chapter21/Observer/ReliableJavaScript.js";
-import { Conference } from "../../src/chapter21/Observer/index.js";
+﻿import "../../../src/chapter21/observer_pattern/Aop.js"
+import "../../../src/chapter21/observer_pattern/ReliableJavaScript.js";
+import { Conference } from "../../../src/chapter21/observer_pattern/index.js";
 
 describe("recentRegistrationsService", function() {
   'use strict';
