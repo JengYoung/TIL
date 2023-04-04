@@ -23,7 +23,26 @@ pod install
 
 #### 2. 그러면, 이러한 Ruby는 왜 설치해야할까?
 
-일단 `React-native`를 생성하는 과정에서 `GemFile`이 나온다.  
+리액트 네이티브를 온전히 IOS 패키지로 빌드하는 것은 단순히 `JavaScript`로 되지 않는다.  
+JavaScript 코드는 로 변환이 되어야 하고, 그 과정에서 `XCode`에서 빌드가 되어야 한다.
+
+이때, 문제는 XCode에서 사용하려면 기존의 환경으로는 불가하다.  
+이를 도와줄 패키지 매니저가 필요한데,  `cocoapods`를 통해서, XCode와 연결시킬 수 있다.
+
+
+다음을 입력하여, Ruby를 기반으로 `cocoapods`와 관련된 네이티브 앱 개발에 필요한 `gem`들을 설치할 수 있도록 해야 한다.  
+
+`cocoapods`는 IOS 네이티브 코드의 종속성 관리를 위해 사용되는 패키지이다. 
+이는 `ruby`로 작성되어 있기에 Ruby를 사용하는 것이다. 공식문서에도 이렇게 쓰여져 있다.
+
+> CocoaPods is built with Ruby and it will be installable with the default Ruby available on macOS.
+
+```bash
+bundle install
+```
+
+
+결과적으로 위의 절차를 통해 `React-native`를 생성하는 과정에서 생성된 `GemFile`에 대해 필요한 패키지들을 install하게 되었다.  
 이 내용을 한 번 보자.  
 
 
@@ -36,14 +55,7 @@ ruby File.read(File.join(__dir__, '.ruby-version')).strip
 gem 'cocoapods', '~> 1.11', '>= 1.11.3'
 ```
 
-오! `cocoapods`. 이유를 알았다. 
-
-`cocoapods`는 IOS 네이티브 코드의 종속성 관리를 위해 사용되는 패키지이다. 
-그런데 이는 `ruby`로 작성되어 있다. 공식문서에도 이렇게 쓰여져 있다.
-
-> CocoaPods is built with Ruby and it will be installable with the default Ruby available on macOS.
-
-따라서 `ruby`에 대한 의존성이 발생하는 것이다.
+따라서 이를 통해 `cocoapods`에 대한 의존성을 관리해줄 수 있고, 그렇기에 `ruby`에 대한 의존성이 발생하는 것이다.
 
 #### 3. (결론) 그냥 `cocoapods`를 잘 설치해주면 되겠다.
 
