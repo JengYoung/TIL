@@ -106,9 +106,9 @@ const testName1: TOmit<Name, "last"> = {
   last: "1",
 };
 
-const testName2: TOmit2<Name, "last"> = {
+const testName2: { first: string } = {
   first: "3",
-  last: "1",
+  last: "2",
 };
 ```
 
@@ -132,7 +132,7 @@ TOmit2는 T와 K 두 개의 제네릭을 받으며, TPick 타입을 사용하여
 
 반면에 testName2는 TOmit2<Name, "last"> 타입을 사용하고 있으며, "last" 속성을 포함한 { first: string, last: string } 형태의 객체를 할당하려고 한다.  
 이 경우 TOmit2<Name, "last"> 타입은 "last" 속성을 제외한 속성들을 선택한 타입이기 때문에 { first: string }와 일치하게 된다.  
-따라서 타입스크립트 컴파일러는 이를 유효한 할당으로 간주하여 컴파일 오류를 발생시키지 않습니다.
+따라서 타입스크립트 컴파일러는 이를 유효한 할당으로 간주하여 컴파일 오류를 발생시키지 않는다.
 
 TOmit2의 동작 방식을 보면 keyof T extends K ? never : keyof T로 되어 있는데, keyof T와 K를 비교하여 never 또는 keyof T 타입으로 변환하는 것이 아니라 조건부 타입인 keyof T extends K ? never : keyof T 자체를 타입으로 사용하게 된다.
 
@@ -140,3 +140,8 @@ TOmit2의 동작 방식을 보면 keyof T extends K ? never : keyof T로 되어 
 
 결론적으로 TOmit2의 동작 방식 때문에 TOmit2<Name, "last"> 타입은 "last" 속성을 제외한 속성들을 선택한 타입이며, { first: string }와 일치하게 된다.  
 따라서 testName2에 "last" 속성이 포함된 객체를 할당해도 타입스크립트 컴파일러는 이를 유효한 할당으로 처리하고 컴파일 오류를 발생시키지 않는다.
+
+# 참고자료
+
+- [📘 타입스크립트 조건부 타입 완벽 이해하기](https://inpa.tistory.com/entry/TS-%F0%9F%93%98-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A1%B0%EA%B1%B4%EB%B6%80-%ED%83%80%EC%9E%85-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0)
+- [TypeScript 2.8 - Conditional Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html#distributive-conditional-types)

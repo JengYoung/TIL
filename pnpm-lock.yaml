@@ -7,23 +7,13 @@ importers:
       dotenv: ^10.0.0
       parcel-bundler: ^1.12.5
       tdd-jasmine: workspace:*
+      typescript: ^5.1.6
     dependencies:
       dotenv: 10.0.0
-      tdd-jasmine: link:programmings/tdd/jasmine
+      tdd-jasmine: link:programmings/tdd/jasmine-tdd
     devDependencies:
       parcel-bundler: 1.12.5
-
-  programmings/tdd/jasmine:
-    specifiers:
-      jasmine: ^4.5.0
-      karma: ^6.4.1
-      karma-chrome-launcher: ^3.1.1
-      karma-jasmine: ^5.1.0
-    devDependencies:
-      jasmine: 4.5.0
-      karma: 6.4.1
-      karma-chrome-launcher: 3.1.1
-      karma-jasmine: 5.1.0_karma@6.4.1
+      typescript: 5.1.6
 
   programmings/tdd/jasmine-tdd:
     specifiers:
@@ -3044,7 +3034,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
@@ -5926,6 +5916,12 @@ packages:
 
   /typedarray/0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
+    dev: true
+
+  /typescript/5.1.6:
+    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+    engines: {node: '>=14.17'}
+    hasBin: true
     dev: true
 
   /ua-parser-js/0.7.32:

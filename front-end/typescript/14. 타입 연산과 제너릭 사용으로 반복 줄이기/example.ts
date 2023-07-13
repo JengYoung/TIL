@@ -54,7 +54,7 @@ const e3: Omit<E1, E2 | E3> = "1";
 type TOmit<T, K> = TPick<T, TExclude<keyof T, K>>;
 type TOmit2<T, K> = TPick<T, keyof T extends K ? never : keyof T>;
 
-const testName1: TOmit<Name, "last"> = {
+const testName1: TOmit2<Name, "last"> = {
   first: "3",
   last: "1",
 };

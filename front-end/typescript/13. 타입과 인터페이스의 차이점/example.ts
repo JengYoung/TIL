@@ -120,7 +120,6 @@ const Test2: INamedVariable = {
 /**
  * @example 인터페이스 선언 보강의 예시
  */
-
 interface Example {
   case1: string;
 }

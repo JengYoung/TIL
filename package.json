@@ -7,7 +7,8 @@
     "tdd-jasmine": "workspace:*"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^5.1.6"
   },
   "packageManager": "pnpm@7.15.0"
 }
