@@ -43,18 +43,18 @@ type TPartial<T> = {
   [key in keyof T]?: T[key];
 };
 
-type TExclude<T1, T2> = T1 extends T2 ? never : T1;
-
 type E1 = "1" | "2" | "3" | "4" | "5";
 type E2 = "2" | "4";
 type E3 = "3";
 
-const e3: Omit<E1, E2 | E3> = "1";
+const e3: Partial<E1, E2 | E3> = "1";
 
+type TExclude<T1, T2> = T1 extends T2 ? never : T1;
 type TOmit<T, K> = TPick<T, TExclude<keyof T, K>>;
+
 type TOmit2<T, K> = TPick<T, keyof T extends K ? never : keyof T>;
 
-const testName1: TOmit2<Name, "last"> = {
+const testName1: TOmit<Name, "last"> = {
   first: "3",
   last: "1",
 };
